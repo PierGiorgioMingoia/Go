@@ -4,6 +4,29 @@ import "fmt"
 
 const MAX int = 100
 
+func myMessage(fName string) {
+	fmt.Println("Hello", fName, "Ciao")
+}
+
+func myFunction(x int, y int) int {
+	return x + y
+}
+
+func multipleReturn(x int, y string) (result int, txt1 string) {
+	result = x + x
+	txt1 = y + " World!"
+	return
+}
+
+func factorial_recursion(x float64) (y float64) {
+	if x > 0 {
+		y = x * factorial_recursion(x-1)
+	} else {
+		y = 1
+	}
+	return
+}
+
 //This is a comment
 func main() {
 	fmt.Println("Hello world")
@@ -26,7 +49,22 @@ func main() {
 	if 20 > 18 {
 		fmt.Println("20 is greater then 18")
 	} else {
-		fmt.Println("20 is greater then 18")
+		fmt.Println("20 is less then 18")
 	}
+
+	switch a[0] {
+	case 1:
+		x = 5
+	case 2:
+		x = 6
+	default:
+		x = 0
+	}
+
+	for i := 0; i < 5; i++ {
+		fmt.Println(i)
+	}
+
+	fmt.Println(factorial_recursion(10))
 
 }
